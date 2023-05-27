@@ -1,0 +1,99 @@
+{
+  "welcome_frame": {
+    "title_label": "Bunny Hop",
+    "username_label_not_logged": "Nincs bejelentkezve",
+    "username_label_logged": "Üdvözlet",
+    "login_button_not_logged": "Bejelentkezés",
+    "login_button_logged": "Kijelentkezés",
+    "play_button": "Játék",
+    "settings_button": "Beállítások",
+    "profile_button": "Profil",
+    "admin_label": "Admin Opciók",
+    "github_label": "Készítette @broland29",
+    "notify_popup_not_logged": "Nem vagy bejelentkezve!",
+    "notify_popup_not_admin": "Nincsenek admin kiváltságaid!",
+    "notify_popup_log_out": "Kijelentkeztél."
+  },
+  "settings_frame": {
+    "title_label": "Beállítások",
+    "difficulty_label": "Nehézség",
+    "language_label": "Nyelv",
+    "back_button": "Mentés és Kilépés"
+  },
+  "register_frame": {
+    "title_label": "Regisztráció",
+    "username_label": "Felhasználónév",
+    "password_label1": "Jelszó",
+    "password_label2": "Jelszó Ismét",
+    "login_label": "Már regisztráltál? Bejelentkezés.",
+    "register_button": "Regisztrálás",
+    "back_button": "Vissza"
+  },
+  "profile_frame": {
+    "title_label": "Játékok",
+    "gid": "gid",
+    "date": "dátum",
+    "time": "idő",
+    "difficulty": "N",
+    "optimal_path_length": "OÚH",
+    "actual_path_length": "AÚH",
+    "stat_button": "Mutasd a Pitegramot",
+    "back_button": "Vissza",
+    "plot_legend": "Nehézség",
+    "plot_title": "Játszmák Száma Nehézséghez Viszonyítva"
+  },
+  "login_frame": {
+    "title_label": "Bejelentkezés",
+    "username_label": "Felhasználónév",
+    "password_label": "Jelszó",
+    "message_label_empty_fields": "Kérlek tölts ki minden adatot!",
+    "message_label_incorrect_credentials": "Helytelen felhasználónév vagy jelszó!",
+    "register_label": "Nincs Profilod? Regisztráció.",
+    "login_button": "Bejelentkezés",
+    "back_button": "Vissza"
+  },
+  "game_frame": {
+    "title_label_time": "Idő",
+    "title_label_best": "Opt.",
+    "time_label_dashed": "----",
+    "time_label_you": "Te",
+    "pause_button_start": "Start",
+    "pause_button_pause": "Szünet",
+    "pause_button_resume": "Folytat",
+    "pause_button_again": "Újból",
+    "quit_button": "Kilép",
+    "help_button_help": "Tipp",
+    "help_button_solution": "Megoldás",
+    "title_messagebox": "Tipp",
+    "help_messagebox": "Használd a keypad 1, 2, 4 és 5-ös gombjait (aktív NumLock-al) hogy a nyuszit irányítsd. Találj el a répához, elkerülve a csapdákat. Hajrá! :)"
+  },
+  "admin_frame": {
+    "title_label": "Admin Opciók",
+    "uid": "UID",
+    "username": "Felhasználónév",
+    "is_admin": "Admin-e",
+    "message_label_successful_add": "Játékos sikeresen hozzáadva",
+    "message_label_successful_update": "Játékos sikeresen frissítve",
+    "message_label_successful_delete": "Játékos sikeresen törölve",
+    "username_label": "Felhasználónév",
+    "password_label1": "Jelszó",
+    "password_label2": "Jelszó Ismét",
+    "is_admin_checkbox": "Admin-e",
+    "add_button": "Játékos Hozzáadása",
+    "update_button": "Játékos Frissítése",
+    "delete_button": "Játékos Törlése",
+    "back_button": "Vissza",
+    "no_selected_user": "Egyetlen játékos sincs kiválasztva!"
+  },
+  "registration_validator": {
+    "message_label_empty_fields": "Kérlek tölts ki minden adatot!",
+    "message_label_short_username": "A felhasználónév legalább 3 karakter hosszú kell legyen!",
+    "message_label_long_username": "A felhasználónév legfeljebb 3 karakter hosszú kell legyen!",
+    "message_label_bad_username": "A felhasználónév csak alfanumerikus karaktereket tartalmazhat",
+    "message_label_taken_username": "Ez a felhasználónév sajnos már foglalt!",
+    "message_label_password_mismatch": "A megadott jelszavak nem egyeznek meg",
+    "message_label_short_password": "A jelszó legalább 3 karakter hosszú kell legyen!",
+    "message_label_long_password": "A jelszó legfeljebb 3 karakter hosszú kell legyen!",
+    "message_label_bad_password": "A jelszó csak alfanumerikus karaktereket tartalmazhat"
+  }
+}

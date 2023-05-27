@@ -1,0 +1,99 @@
+{
+  "welcome_frame": {
+    "title_label": "Bunny Hop",
+    "username_label_not_logged": "Not logged in",
+    "username_label_logged": "Welcome",
+    "login_button_not_logged": "Log In",
+    "login_button_logged": "Log Out",
+    "play_button": "Play",
+    "settings_button": "Settings",
+    "profile_button": "Profile",
+    "admin_label": "Admin Options",
+    "github_label": "Made By @broland29",
+    "notify_popup_not_logged": "You are not logged in!",
+    "notify_popup_not_admin": "You do not have admin privileges!",
+    "notify_popup_log_out": "You logged out."
+  },
+  "settings_frame": {
+    "title_label": "Settings",
+    "difficulty_label": "Difficulty",
+    "language_label": "Language",
+    "back_button": "Save and Quit"
+  },
+  "register_frame": {
+    "title_label": "Register",
+    "username_label": "Username",
+    "password_label1": "Password",
+    "password_label2": "Repeat Pass",
+    "login_label": "Already registered? Log in.",
+    "register_button": "Register",
+    "back_button": "Back"
+  },
+  "profile_frame": {
+    "title_label": "Games",
+    "gid": "gid",
+    "date": "date",
+    "time": "time",
+    "difficulty": "D",
+    "optimal_path_length": "OPL",
+    "actual_path_length": "APL",
+    "stat_button": "Show Pie Chart",
+    "back_button": "Back",
+    "plot_legend": "Difficulty",
+    "plot_title": "Number of Games Played by Difficulty"
+  },
+  "login_frame": {
+    "title_label": "Log In",
+    "username_label": "Username",
+    "password_label": "Password",
+    "message_label_empty_fields": "Please fill in each field!",
+    "message_label_incorrect_credentials": "Incorrect username or password!",
+    "register_label": "No Account? Register.",
+    "login_button": "Log In",
+    "back_button": "Back"
+  },
+  "game_frame": {
+    "title_label_time": "Time",
+    "title_label_best": "Best",
+    "time_label_dashed": "----",
+    "time_label_you": "You",
+    "pause_button_start": "Start",
+    "pause_button_pause": "Pause",
+    "pause_button_resume": "Resume",
+    "pause_button_again": "Again",
+    "quit_button": "Quit",
+    "help_button_help": "Help",
+    "help_button_solution": "Solution",
+    "title_messagebox": "Help",
+    "help_messagebox": "Press buttons 1, 2, 4 and 5 on the keypad (with NumLock activated) to control the bunny. Get to the carrot without getting caught in the traps. Have fun! :)"
+  },
+  "admin_frame": {
+    "title_label": "Admin Options",
+    "uid": "UID",
+    "username": "Username",
+    "is_admin": "Is admin",
+    "message_label_successful_add": "Player added successfully",
+    "message_label_successful_update": "Player updated successfully",
+    "message_label_successful_delete": "Player deleted successfully",
+    "username_label": "Username",
+    "password_label1": "Password",
+    "password_label2": "Repeat Pass",
+    "is_admin_checkbox": "Is admin",
+    "add_button": "Add Player",
+    "update_button": "Update Player",
+    "delete_button": "Delete Player",
+    "back_button": "Back",
+    "no_selected_user": "No selected user!"
+  },
+  "registration_validator": {
+    "message_label_empty_fields": "Please fill in each field!",
+    "message_label_short_username": "Username must be at least 3 character long!",
+    "message_label_long_username": "Username must be at most 10 character long!",
+    "message_label_bad_username": "Username must contain only alphanumerical characters",
+    "message_label_taken_username": "Unfortunately this username is already taken!",
+    "message_label_password_mismatch": "Passwords provided do not match!",
+    "message_label_short_password": "Password must be at least 3 character long!",
+    "message_label_long_password": "Password must be at most 10 character long!",
+    "message_label_bad_password": "Password must contain only alphanumerical characters"
+  }
+}

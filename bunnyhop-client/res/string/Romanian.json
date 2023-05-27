@@ -1,0 +1,99 @@
+{
+  "welcome_frame": {
+    "title_label": "Bunny Hop",
+    "username_label_not_logged": "Nu ești logat",
+    "username_label_logged": "Bine ai venit",
+    "login_button_not_logged": "Autentificare",
+    "login_button_logged": "Deconectare",
+    "play_button": "Joacă",
+    "settings_button": "Setări",
+    "profile_button": "Profil",
+    "admin_label": "Opțiuni de administrator",
+    "github_label": "Realizat de @broland29",
+    "notify_popup_not_logged": "Nu ești autentificat!",
+    "notify_popup_not_admin": "Nu ai privilegii de administrator!",
+    "notify_popup_log_out": "Ai fost deconectat."
+  },
+  "settings_frame": {
+    "title_label": "Setări",
+    "difficulty_label": "Dificultate",
+    "language_label": "Limbă",
+    "back_button": "Salvează și ieși"
+  },
+  "register_frame": {
+    "title_label": "Înregistrare",
+    "username_label": "Nume utilizator",
+    "password_label1": "Parolă",
+    "password_label2": "Repetă parola",
+    "login_label": "Deja înregistrat? Autentifică-te.",
+    "register_button": "Înregistrare",
+    "back_button": "Înapoi"
+  },
+  "profile_frame": {
+    "title_label": "Jocuri",
+    "gid": "gid",
+    "date": "dată",
+    "time": "timp",
+    "difficulty": "D",
+    "optimal_path_length": "LDO",
+    "actual_path_length": "LDA",
+    "stat_button": "Arată Graficul Proporțiilor",
+    "back_button": "Înapoi",
+    "plot_legend": "Dificultate",
+    "plot_title": "Numărul de jocuri jucate în funcție de dificultate"
+  },
+  "login_frame": {
+    "title_label": "Autentificare",
+    "username_label": "Nume utilizator",
+    "password_label": "Parolă",
+    "message_label_empty_fields": "Vă rugăm să completați toate câmpurile!",
+    "message_label_incorrect_credentials": "Nume de utilizator sau parolă incorectă!",
+    "register_label": "Nu Aveți Cont? Înregistrați-vă.",
+    "login_button": "Autentificare",
+    "back_button": "Înapoi"
+  },
+    "game_frame": {
+    "title_label_time": "Timp",
+    "title_label_best": "Opt.",
+    "time_label_dashed": "----",
+    "time_label_you": "Tu",
+    "pause_button_start": "Start",
+    "pause_button_pause": "Pauză",
+    "pause_button_resume": "Continuă",
+    "pause_button_again": "Joc Nou",
+    "quit_button": "Ieșire",
+    "help_button_help": "Ajutor",
+    "help_button_solution": "Soluție",
+    "title_messagebox": "Ajutor",
+    "help_messagebox": "Apăsați butoanele 1, 2, 4 și 5 de pe tastatura numerică (cu NumLock activat) pentru a controla iepurașul. Ajungeți la morcov fără a fi prins în capcane. Baftă! :)"
+  },
+  "admin_frame": {
+    "title_label": "Opțiuni admin",
+    "uid": "UID",
+    "username": "Nume utilizator",
+    "is_admin": "Este admin",
+    "message_label_successful_add": "Jucător adăugat cu succes",
+    "message_label_successful_update": "Jucător actualizat cu succes",
+    "message_label_successful_delete": "Jucător șters cu succes",
+    "username_label": "Nume utilizator",
+    "password_label1": "Parolă",
+    "password_label2": "Repetă parola",
+    "is_admin_checkbox": "Este admin",
+    "add_button": "Adaugă jucător",
+    "update_button": "Actualizează jucător",
+    "delete_button": "Șterge jucător",
+    "back_button": "Înapoi",
+    "no_selected_user": "Nu este selectat niciun jucător!"
+  },
+  "registration_validator": {
+    "message_label_empty_fields": "Vă rugăm să completați fiecare câmp!",
+    "message_label_short_username": "Numele de utilizator trebuie să aibă cel puțin 3 caractere!",
+    "message_label_long_username": "Numele de utilizator trebuie să aibă cel mult 10 caractere!",
+    "message_label_bad_username": "Numele de utilizator trebuie să conțină doar caractere alfanumerice",
+    "message_label_taken_username": "Din păcate, acest nume de utilizator este deja luat!",
+    "message_label_password_mismatch": "Parolele furnizate nu se potrivesc!",
+    "message_label_short_password": "Parola trebuie să aibă cel puțin 3 caractere!",
+    "message_label_long_password": "Parola trebuie să aibă cel mult 10 caractere!",
+    "message_label_bad_password": "Parola trebuie să conțină doar caractere alfanumerice"
+  }
+}
