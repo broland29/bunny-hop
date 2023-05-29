@@ -1,6 +1,6 @@
 import time
 
-from GameContext import GameContext
+from game_logic.GameContext import GameContext
 from enums.CellType import CellType
 from enums.FrameType import FrameType
 from session_info.SessionInfo import SessionInfo

@@ -1,8 +1,6 @@
 import threading
-from time import sleep
 
-from Client import Client
-from ClientProxy import ClientProxy
+from client.ClientProxy import ClientProxy
 from controller.MasterController import MasterController
 from view.AppWindow import AppWindow
 
@@ -18,4 +16,5 @@ class AppController:
 
     def enqueue_request(self, request_type, **kwargs):
         self.client.enqueue_request(request_type, **kwargs)
+        print("app controller enqueue")
         return self.client.dequeue_response()

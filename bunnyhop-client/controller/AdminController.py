@@ -1,6 +1,7 @@
 import tkinter as tk
 
 import RequestType
+from User import User
 from enums.FrameType import FrameType
 from session_info.SessionInfo import SessionInfo
 from pattern_templates.Observer import Observer
@@ -38,36 +39,46 @@ class AdminController(Observer):
 
     # basically registration
     def on_add_button(self):
-        pass
-        """
         username = self.admin_frame.username_entry.get()
         password1 = self.admin_frame.password_entry1.get()
         password2 = self.admin_frame.password_entry2.get()
         is_admin = self.admin_frame.is_admin_var.get()
 
-        try:
-            user_validator = RegistrationValidator(username, password1, password2)
-            user_validator.validate()
+        valid_credentials, message = self.master_controller.enqueue_request(
+            RequestType.CHECK_CREDENTIALS_VALIDITY,
+            username=username,
+            password1=password1,
+            password2=password2
+        )
+        if not valid_credentials:
+            self.admin_frame.message_label.config(
+                text=self.session_info.active_language["registration_validator"][message]
+            )
+            return
 
-            # register validated
-            user = User(
-                username=username,
-                password=PasswordManager.encrypt_password(password1),
-                is_admin=is_admin)
-            self.user_dao.create_user(user)
-            self.update_user_list()
-            self.admin_frame.message_label.config(
-                text=self.session_info.active_language["admin_frame"]["message_label_successful_add"])
-        except RegistrationValidatorException as e:
-            # message of thrown exception works as index for field of string
-            self.admin_frame.message_label.config(
-                text=self.session_info.active_language["registration_validator"][e.message])
-        """
+        # register validated
+        encrypted_password = self.master_controller.enqueue_request(
+            RequestType.ENCRYPT_PASSWORD,
+            password=password1
+        )
+
+        user = User(
+            username=username,
+            password=encrypted_password,
+            is_admin=is_admin
+        )
+
+        self.master_controller.enqueue_request(
+            RequestType.CREATE_USER,
+            user=user
+        )
+
+        self.update_user_list()
+        self.admin_frame.message_label.config(
+            text=self.session_info.active_language["admin_frame"]["message_label_successful_add"])
 
     # partly registration
     def on_update_button(self):
-        pass
-        """
         # function returns tuple, first element is index of row => index of list
         try:
             old_user = self.users[self.admin_frame.user_list_box.curselection()[0]]
@@ -81,49 +92,70 @@ class AdminController(Observer):
         password2 = self.admin_frame.password_entry2.get()
         is_admin = self.admin_frame.is_admin_var.get()
 
-        try:
-            user_validator = RegistrationValidator(username, password1, password2)
-
-            if username == "":
-                username = None
-            else:
-                user_validator.validate_username()  # trying to update to same username will give error!
-            if password1 == password2 == "":
-                password = None
-            else:
-                user_validator.validate_password()
-                password = PasswordManager.encrypt_password(password1)  # made sure no None is passed for encryption
-
-            # inputs validated
-            new_user = User(
+        if username == "":
+            username = None
+        else:
+            valid_username, message = self.master_controller.enqueue_request(
+                RequestType.VALIDATE_USERNAME,
                 username=username,
-                password=password,
-                is_admin=is_admin)
+            )
+            if not valid_username:
+                self.admin_frame.message_label.config(
+                    text=self.session_info.active_language["registration_validator"][message]
+                )
+                return
+            # trying to update to same username will give error!
+        if password1 == password2 == "":
+            encrypted_password = None
+        else:
+            valid_password, message = self.master_controller.enqueue_request(
+                RequestType.VALIDATE_PASSWORD,
+                password1=password1,
+                password2=password2
+            )
+            if not valid_password:
+                self.admin_frame.message_label.config(
+                    text=self.session_info.active_language["registration_validator"][message]
+                )
+                return
 
-            self.user_dao.update_user(old_user, new_user)
-            self.update_user_list()
-            self.admin_frame.message_label.config(
-                text=self.session_info.active_language["admin_frame"]["message_label_successful_update"])
-        except RegistrationValidatorException as e:
-            # message of thrown exception works as index for field of string
-            self.admin_frame.message_label.config(
-                text=self.session_info.active_language["registration_validator"][e.message])
-        """
+            encrypted_password = self.master_controller.enqueue_request(
+                RequestType.ENCRYPT_PASSWORD,
+                password=password1  # made sure no None is passed for encryption
+            )
+
+        # inputs validated
+        new_user = User(
+            username=username,
+            password=encrypted_password,
+            is_admin=is_admin)
+
+        self.master_controller.enqueue_request(
+            RequestType.UPDATE_USER,
+            old_user=old_user,
+            new_user=new_user
+        )
+
+        self.update_user_list()
+        self.admin_frame.message_label.config(
+            text=self.session_info.active_language["admin_frame"]["message_label_successful_update"])
 
     def on_delete_button(self):
-        pass
-        """
         try:
             user = self.users[self.admin_frame.user_list_box.curselection()[0]]
         except IndexError:
             self.admin_frame.message_label.config(
                 text=self.session_info.active_language["admin_frame"]["no_selected_user"])
             return
-        self.user_dao.delete_user(user)
+
+        self.master_controller.enqueue_request(
+            RequestType.DELETE_USER,
+            user=user
+        )
+
         self.update_user_list()
         self.admin_frame.message_label.config(
             text=self.session_info.active_language["admin_frame"]["message_label_successful_delete"])
-        """
 
     def update(self, subject):
         string = self.session_info.active_language["admin_frame"]
